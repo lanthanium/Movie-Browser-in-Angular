@@ -1,0 +1,74 @@
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<a class = "headers" id = "homePage" [href] = "''"><i class = "fa fa-arrow-left"></i> &nbsp; Home Page</a>
+
+
+<!-- <div>Watch Later</div>
+<div *ngIf = "watch_Later_BookMarks" class = "body1">
+    <div class = "pic1" *ngFor = "let movie of watch_Later_BookMarks">
+            <a [href] = "'movie/' + movie.id"><img class = "posters" [src] = movie.posterURL></a>
+            {{movie.getTitle()}}
+    </div>
+</div> -->
+<div class = "headers">Watch Later ({{watch_Later_BookMarks.length}})</div>
+<section class="slider-wrapper">
+    <button (click) = "slideLeft('later')" class="slide-arrow" id="slide-arrow-prev">
+      &#8249;
+    </button>
+    <button (click) = "slideRight('later')" class="slide-arrow" id="slide-arrow-next">
+      &#8250;
+    </button>
+    <ul *ngIf = "watch_Later_BookMarks" class="slides-container" #slideContainerLater id="slides-container">
+      <li *ngFor = "let movie of watch_Later_BookMarks" class="slide">
+        <a [href] = "'movie/' + movie.id"><img class = "posters" [src] = movie.posterURL></a>
+        {{movie.getTitle()}}
+      </li>
+    </ul>
+  </section>
+
+
+
+<div class = "middleSection">
+
+  <!-- <div class = "videoContainer">
+    <app-handtracker (onPrediction)="prediction($event)"></app-handtracker>
+    <div [innerHTML]="gesture"></div>
+  </div>  -->
+
+  <div class = "middleFavorites">
+      <div class = "headers">Favorites ({{favorited_BookMarks.length}})</div>
+      <section class="slider-wrapper">
+        <button (click) = "slideLeft('favorite')" class="slide-arrow" id="slide-arrow-prev">
+          &#8249;
+        </button>
+        <button (click) = "slideRight('favorite')" class="slide-arrow" id="slide-arrow-next">
+          &#8250;
+        </button>
+        <ul *ngIf = "favorited_BookMarks" class="slides-container" #slideContainerFavorite id="slides-container">
+          <li *ngFor = "let movie of favorited_BookMarks" class="slide">
+            <a [href] = "'movie/' + movie.id"><img class = "posters" [src] = movie.posterURL></a>
+            {{movie.getTitle()}}
+          </li>
+        </ul>
+      </section>  
+  </div>
+
+</div>
+
+
+<div class = "headers">Seen ({{seen_BookMarks.length}})</div>
+<section class="slider-wrapper">
+  <button (click) = "slideLeft('seen')" class="slide-arrow" id="slide-arrow-prev">
+    &#8249;
+  </button>
+  <button (click) = "slideRight('seen')" class="slide-arrow" id="slide-arrow-next">
+    &#8250;
+  </button>
+  <ul *ngIf = "seen_BookMarks" class="slides-container" #slideContainerSeen id="slides-container">
+    <li *ngFor = "let movie of seen_BookMarks" class="slide">
+      <a [href] = "'movie/' + movie.id"><img class = "posters" [src] = movie.posterURL></a>
+      {{movie.getTitle()}}
+    </li>
+  </ul>
+</section>

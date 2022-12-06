@@ -1,0 +1,102 @@
+<!-- <div class = "videoContainer">
+    <app-handtracker (onPrediction)="prediction($event)"></app-handtracker>
+    <div [innerHTML]="gesture"></div>
+</div> -->
+
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+                
+<div class = "header-left">
+  <div [class.selectedHeader] = "trendSelect" (click) = "switchToTrend()" class = "header-links">Trending</div>
+  <div [class.selectedHeader] = "topSelect" (click) = "switchToTop()" class = "header-links">Top Rated</div>
+  <div [class.selectedHeader] = "nowPlayingSelect" (click) = "switchToNowPlaying()" class = "header-links">Now Playing</div>
+  <a [href]="'bookmark'" class = "header-links">Bookmarks</a>
+</div>
+
+
+<section class="slider-wrapper">
+  <button (click) = "slideLeft()" class="slide-arrow" id="slide-arrow-prev">
+    &#8249;
+  </button>
+  <button (click) = "slideRight()" class="slide-arrow" id="slide-arrow-next">
+    &#8250;
+  </button>
+  <ul *ngIf = "trending" class="slides-container" #slideContainer id="slides-container">
+    <li *ngFor = "let movie of trendMoviesArray" class="slide" #trendList>
+      <a [href] = "'movie/' + movie.id"><img class = "posters" [src] = movie.posterURL></a>
+      {{movie.getTitle()}}
+    </li>
+  </ul>
+</section>
+
+
+<section *ngIf = "topRated" class="slider-wrapper">
+  <button (click) = "slideLeft()" class="slide-arrow" id="slide-arrow-prev">
+    &#8249;
+  </button>
+  <button (click) = "slideRight()" class="slide-arrow" id="slide-arrow-next">
+    &#8250;
+  </button>
+  <ul class="slides-container" #slideContainer id="slides-container">
+    <li *ngFor = "let movie of topMoviesArray" class="slide" #trendList>
+      <a [href] = "'movie/' + movie.id"><img class = "posters" [src] = movie.posterURL></a>
+      {{movie.getTitle()}}
+    </li>
+  </ul>
+</section>
+
+
+<section *ngIf = "nowPlaying" class="slider-wrapper">
+  <button (click) = "slideLeft()" class="slide-arrow" id="slide-arrow-prev">
+    &#8249;
+  </button>
+  <button (click) = "slideRight()" class="slide-arrow" id="slide-arrow-next">
+    &#8250;
+  </button>
+  <ul class="slides-container" #slideContainer id="slides-container">
+    <li *ngFor = "let movie of nowPlayingArray" class="slide" #trendList>
+      <a [href] = "'movie/' + movie.id"><img class = "posters" [src] = movie.posterURL></a>
+      {{movie.getTitle()}}
+    </li>
+  </ul>
+</section>
+
+
+<div class = "searchBox">
+  <input (keydown.enter) = "search()" name="search" placeholder="Search for a movie" [(ngModel)]="queryString">
+  <button (click) = "search()"><i class = "fa fa-search"></i></button>
+</div>
+
+
+<div class = "searchContent" *ngIf = "searchMoviesArray.length">
+  <a [href] = "'movie/' + movie.id" class = "individualSearchQuery" *ngFor = "let movie of searchMoviesArray">
+    <div><img class = "searchImage" [src] = movie.posterURL></div>
+    <div class = "searchDescriptionSection">
+      <div class = "searchDescriptionTitle">{{movie.getTitle()}}</div>
+      <div class = "searchDescriptionDate">Release Date: {{movie.getDate()}}</div>
+      <div class = "searchDescriptionSummary">{{movie.getOverview()}}</div>
+    </div>
+  </a>
+</div>
+
+  <!-- <div class = "searchContent" *ngIf = "searchMoviesArray.length">
+    <div *ngFor = "let movie of searchMoviesArray">
+      <a [href] = "'movie/' + movie.id"><img class = "searchImage" [src] = movie.posterURL></a>
+      <a>{{movie.getTitle()}}</a>
+      <div>{{movie.getTitle()}}</div>
+      <div>{{movie.getOverview()}}</div>
+      <div>{{movie.getDate()}}</div>
+    </div>
+  </div> -->
+
+
+
+  <!-- <div *ngIf = "trendMoviesArray" class = "body1">
+    <div class = "pic1" *ngFor = "let movie of trendMoviesArray">
+            <a [href] = "'movie/' + movie.id"><img class = "posters" [src] = movie.posterURL></a>
+            {{movie.getTitle()}}
+    </div>
+
+</div> -->

@@ -1,0 +1,7 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.cdnfonts.com/css/amazon-ember');
+html {
+    background-color:#21262d;
+    color: white;
+    font-family: 'Amazon Ember', sans-serif;
+}

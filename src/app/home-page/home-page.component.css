@@ -1,0 +1,245 @@
+
+.header-left{
+  display:flex;
+  gap: 3vh;
+  color: white;
+  font-size: 1.3vw;
+  font-weight: 900;
+  margin: 0;
+  margin-bottom: -.5vw;
+  margin-left: 3vw;
+}
+
+.header-links{
+  padding: .5vw;
+  border-radius: 2vh;
+}
+
+div.header-links:hover{
+  background: rgb(46, 167, 215);
+  cursor: pointer;
+}
+
+a.header-links{
+  text-decoration: none;
+  color: white;
+  margin-left: 55vw;
+}
+
+a.header-links:hover{
+  background: rgb(46, 167, 215);
+  cursor: pointer;
+}
+
+.selectedHeader{
+  background: rgb(46, 167, 215);
+}
+
+.videoContainer{
+    display: flex;
+    justify-content: center;
+}
+
+.posters{
+    max-width: 15vh;
+    max-height: auto;
+    border-radius: 2vh;
+    
+}
+
+.body1{
+    display: flex;
+    flex-wrap: wrap;
+    
+    
+}
+
+/* .pic1{
+    display:flex;
+    flex-direction:column;
+    text-align:center;
+    font-size: 1.5vh;
+    color: black;
+    font-weight:550;
+    padding-left: 4vw;
+    padding-bottom: 1.5vw;
+    max-width: 9vw;
+    
+} */
+/*
+#moviesList{
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    align-items: center;
+}
+
+.containerOfEachMovie{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.movieTitle{
+    align-self: center;
+} */
+
+.slider-wrapper {
+    margin: 1rem;
+    position: relative;
+    overflow: hidden;
+    border-width: 2vh;
+    
+
+  }
+  
+  .slides-container {
+    max-height: 31vh;
+    height: 31vh;
+    display: flex;
+    overflow: hidden;
+    scroll-behavior: smooth;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(22, 23, 25);
+    border-radius:5vh;
+    border-width: 2vh;
+  
+  }
+
+  .slide-arrow {
+    position: absolute;
+    display: flex;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    height: 4rem;
+    background-color: white;
+    border: none;
+    width: 2rem;
+    font-size: 3rem;
+    padding: 0;
+    cursor: pointer;
+    opacity: 0.5;
+    transition: opacity 100ms;
+  }
+
+  .slide-arrow:hover, .slide-arrow:focus {
+  opacity: 1;
+}
+
+#slide-arrow-prev {
+    left: 0;
+    padding-left: 0.25rem;
+    border-radius: 0 2rem 2rem 0;
+  }
+  
+#slide-arrow-next {
+    right: 0;
+    padding-left: 0.75rem;
+    border-radius: 2rem 0 0 2rem;
+  }
+  
+.slide {
+    text-align:center;
+    padding-top: 1vw;
+    padding-right: 1.5vw;
+    padding-left: 1.5vw;
+    padding-bottom: 1vw;
+    color: rgb(218, 242, 248);
+    font-weight: 500;
+    font-size: 1.5vh;
+  }
+
+  .slide:hover{
+    background-color:  rgb(67, 76, 96);
+  }
+
+  .searchBox{
+    display:flex;
+    justify-content: center;
+  }
+
+  input{
+    padding: .5vw;
+    width: 20vw;
+    background-color:  rgb(22, 23, 25);
+    color: rgb(218, 242, 248);
+    border-radius: 1vh;
+    font-size: .85vw;
+    font-weight: bold;
+    border: 0;
+    margin-right: .5vw;
+  }
+
+  button{
+    background-color:rgb(46, 167, 215);
+    border: 0;
+    border-radius: .5vw;
+    padding: .75vw;
+    cursor: pointer;
+    height: 5vh;
+    width: 5vh;
+    
+  }
+
+  button:hover{
+    background-color: rgb(153, 215, 239);
+  }
+
+  .searchContent{
+   
+    margin: 1rem;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .searchImage{
+    max-height: 20vh;
+    max-width: auto;
+    border-radius: 1vh;
+  }
+  
+  .individualSearchQuery{
+    display:flex;
+    padding: 2vh;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    margin-bottom: 1.5vh;
+    max-width: 65vw;
+    background-color:  rgb(22, 23, 25);
+    border-radius: 2vh;
+    text-decoration: none;
+    color: white;
+    width: 65vw;
+  }
+
+  .individualSearchQuery:hover{
+    background-color:  rgb(67, 76, 96);
+  }
+
+  .searchDescriptionSection{
+    display:flex;
+    flex-direction: column;
+    padding-left: 1vw;
+    max-width: 55vw;
+  }
+
+  .searchDescriptionTitle{
+    font-size: 3vh;
+    font-weight:700;
+    color: rgb(141, 217, 245);
+  }
+
+  .searchDescriptionDate{
+    padding-top: .5vw;
+    padding-bottom: 1vw;
+  }
+
+  .searchDescriptionSummary{
+    color: rgb(212, 212, 212);
+
+  }

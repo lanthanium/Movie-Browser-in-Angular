@@ -1,0 +1,57 @@
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+
+  <header class = "header">
+    <div class = links>
+        <a [href] = "''" class = "header-links">Home Page</a>
+        <a [href]="'bookmark'" class = "header-links">Bookmarks</a>
+    </div>
+</header>
+
+<div class = "details" *ngIf = "selected_Movie">
+    <div class = "title">{{selected_Movie.getTitle()}}</div>
+    <div class = "date">Release Date: {{selected_Movie.getDate()}}</div>    
+    
+    <div class = "midDetails">
+        <img [src] = "selected_Movie.posterURL">
+        <div class = rightMidDetails>
+            <div class = "videoContainer">
+                <!-- <app-handtracker (onPrediction)="prediction($event)"></app-handtracker>
+                <div [innerHTML]="gesture"></div> -->
+            </div> 
+            <div class = bookmarkButtonGroup>
+                <div *ngIf = "defaultLaterButton" (click) = "addToBookmarks('later')" class = bookmarkButton><i class = "fa fa-hand-paper-o"></i>  Watch Later  <i class = "fa fa-hand-paper-o"></i></div>
+                <div *ngIf = "removeLaterButton" (click) = "removeFromBookmarks('later')" class = bookmarkButton>  Remove from Watch Later  <i class = "fa fa-minus"></i></div>
+                <div *ngIf = "removeSeenButton" (click) = "removeFromBookmarks('seen')" class = bookmarkButton> Remove from Seen  <i class = "fa fa-minus"></i>  </div>                
+                <div *ngIf = "defaultSeenButton" (click) = "addToBookmarks('seen')" class = bookmarkButton><i class = "fa fa-hand-grab-o"></i>  Seen  <i class = "fa fa-hand-grab-o"></i>  </div>
+                <div *ngIf = "defaultFavoriteButton" (click) = "addToBookmarks('favorites')" class = bookmarkButton><i class = "fa fa-hand-pointer-o"></i>  Favorite  <i class = "fa fa-hand-pointer-o"></i></div>
+                <div *ngIf = "removeFavoriteButton" (click) = "removeFromBookmarks('favorites')" class = bookmarkButton>  Remove from Favorites  <i class = "fa fa-minus"></i></div>                
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class = "runtime">Runtime {{selected_Movie.getRuntime()}}</div>
+    <div class = "lowerDetails">
+        <div class = "summary">{{selected_Movie.getOverview()}}</div>
+        <div class = "rating">Rating: {{selected_Movie.getRating()}}</div>
+        <div class = "boxOffice">Box Office: {{selected_Movie.getBoxOffice()}}</div>
+    </div>
+    <div class = IMDbLogo (click)="redirectToIMDB(selected_Movie.getIMDB_URL())">IMDb</div>
+        <!-- <img class = "imdbLogo" [src] = "'https://upload.wikimedia.org/wikipedia/commons/6/69/IMDB_Logo_2016.svg'"> -->
+</div>
+
+
+<!-- <a [href] = "''">Back to Home Page</a>
+<br>
+<a [href] = "'bookmark'">Check Out Your BookMarks</a> -->
+<!---<button (click) = testConfirm()>Test confirm</button> -->
+
+
+<!-- <div class = "videoContainer">
+    <app-handtracker (onPrediction)="prediction($event)"></app-handtracker>
+    <div [innerHTML]="gesture"></div>
+</div>  -->
+
