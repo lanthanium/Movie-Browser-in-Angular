@@ -235,13 +235,3 @@ export class MovieService {
   }
 
 }
-/*
-    Hey guys, so this is a quick demo video of a simple CRUD movie browser web app.  You're able to browse and search up any movies
-    you want it works 
-    by sending API requests to MovieDB.org It's kind of like IMDB but you have to pay for accessing IMDB's API.
-    Anyways yea this app also incorporates hand gestures, so you can swipe a carousel and depending on your gestures
-    you can add movies to certain bookmarks, like favorites, watch later, and seen. 
-    I'm first gonna just walk through regular usage of the app without hand gestures and then later show how hand gestures
-    can be used as additional functionalities. 
-
-*/

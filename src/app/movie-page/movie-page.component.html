@@ -17,8 +17,8 @@
         <img [src] = "selected_Movie.posterURL">
         <div class = rightMidDetails>
             <div class = "videoContainer">
-                <!-- <app-handtracker (onPrediction)="prediction($event)"></app-handtracker>
-                <div [innerHTML]="gesture"></div> -->
+                <app-handtracker (onPrediction)="prediction($event)"></app-handtracker>
+                <div [innerHTML]="gesture"></div>
             </div> 
             <div class = bookmarkButtonGroup>
                 <div *ngIf = "defaultLaterButton" (click) = "addToBookmarks('later')" class = bookmarkButton><i class = "fa fa-hand-paper-o"></i>  Watch Later  <i class = "fa fa-hand-paper-o"></i></div>

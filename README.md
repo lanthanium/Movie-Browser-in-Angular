@@ -1,8 +1,15 @@
 # Demo Link
 https://www.youtube.com/watch?v=tA9uxOuxnGg
 
+# To Run
+run the command "npm install" in the root directory to install all required dependencies.
+
+See "Info" section below to insert your own API key. 
+
+run the command "ng serve" to run the program. 
+
 # Overview
-A CRUD web application where users can search any movies or browse the current trending/popular movies from TheMovieDB.org. 
+A web application where users can search any movies or browse the current trending/popular movies from TheMovieDB.org. 
 Application is designed with ease of accessibliity and user interface in mind.  Clean, elegant, visually appealing and highly interactive. 
 
 # Info
